@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:text="Какой формы Земля?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rbDisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="диск" />
+
+        <RadioButton
+            android:id="@+id/rbSphere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Шар" />
+
+        <RadioButton
+            android:id="@+id/rbEllipsoid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Эллипсоид" />
+
+        <RadioButton
+            android:id="@+id/rbCube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Куб" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/butAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="check"
+        app:layout_constraintEnd_toEndOf="@+id/rgAnswers"
+        app:layout_constraintStart_toEndOf="@+id/rgAnswers"
+        app:layout_constraintTop_toBottomOf="@+id/rgAnswers" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="@+id/butAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/butAnswer" />
+</android.support.constraint.ConstraintLayout>
