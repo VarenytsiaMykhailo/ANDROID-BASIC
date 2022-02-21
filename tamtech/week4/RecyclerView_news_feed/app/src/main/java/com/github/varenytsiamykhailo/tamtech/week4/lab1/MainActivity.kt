@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         // Осуществление http запроса в сеть
         val o =
-            createRequest("https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Frss.xml")
+            createRequest("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Flenta.ru%2Frss")
                 .map { Gson().fromJson(it, Feed::class.java) }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()) // subscribeOn - поток, в котором будет выполнение, observeOn - поток, в который вернуть исполнение
@@ -120,7 +120,7 @@ private class ListAdapter(val items: ArrayList<FeedItem>) :
             }
              */
 
-            val thumbURI: String = item.thumbnail
+            val thumbURI: String = item.enclosure.link
             try {
                 Picasso.with(vThumb.context).load(thumbURI).into(vThumb)
             } catch (e: Exception) {
@@ -148,8 +148,14 @@ class Feed(
 class FeedItem(
     val title: String,
     val link: String,
-    val thumbnail: String,
-    val description: String
+    val description: String,
+    val enclosure: Enclosure
 ) {
 
 }
+
+data class Enclosure(
+    val link: String,
+    val type: String,
+    val length: Int
+)
