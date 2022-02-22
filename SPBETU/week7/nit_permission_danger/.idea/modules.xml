@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nit_permission_danger.iml" filepath="$PROJECT_DIR$/.idea/modules/nit_permission_danger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/nit_permission_danger.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/nit_permission_danger.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/checker/nit_permission_danger.checker.iml" filepath="$PROJECT_DIR$/.idea/modules/checker/nit_permission_danger.checker.iml" />
+    </modules>
+  </component>
+</project>

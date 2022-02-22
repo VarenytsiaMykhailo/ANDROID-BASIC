@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Feb 22 17:46:29 MSK 2022
+0.base=D\:\\github-reps\\ANDROID-BASIC\\SPBETU\\week7\\nit_permission_danger\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+count=1
+0.baseType=DIRECTORY
+0.set=DEX
