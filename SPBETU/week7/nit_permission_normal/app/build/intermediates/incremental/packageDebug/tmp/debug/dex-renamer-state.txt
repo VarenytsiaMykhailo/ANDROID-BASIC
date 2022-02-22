@@ -1,0 +1,4 @@
+#Tue Feb 22 16:50:22 MSK 2022
+base.0=D\:\\github-reps\\ANDROID-BASIC\\SPBETU\\week7\\nit_permission_normal\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+path.0=classes.dex
