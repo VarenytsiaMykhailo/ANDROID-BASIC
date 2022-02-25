@@ -33,28 +33,27 @@ class MainActivity : AppCompatActivity() {
 
         // ------------------
 
-        aPersist = savedInstanceState?.getString("aPersist", "aPersist_default") ?: "aPersist_new"
-        bPersist = savedInstanceState?.getString("bPersist", "bPersist_default") ?: "bPersist_new"
-        cPersist = savedInstanceState?.getString("cPersist", "cPersist_default") ?: "cPersist_new"
+        //aPersist = savedInstanceState?.getString("aPersist", "aPersist_default") ?: "aPersist_new"
+        //bPersist = savedInstanceState?.getString("bPersist", "bPersist_default") ?: "bPersist_new"
+        //cPersist = savedInstanceState?.getString("cPersist", "cPersist_default") ?: "cPersist_new"
 
-        Log.d("qwertyAPersist", aPersist)
-        Log.d("qwertyBPersist", bPersist)
-        Log.d("qwertyCPersist", cPersist)
+        //Log.d("qwertyAPersist", aPersist)
+        //Log.d("qwertyBPersist", bPersist)
+        //Log.d("qwertyCPersist", cPersist)
 
     }
 
     // Этот метод можно использовать для сохранения данных при поворотах экрана, когда активити пересоздается
     // Или можно в манифесте запретить пересоздавать активити при повротах экрана
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
         Log.d("qwertyOSIS", "onSaveInstanceState")
 
         outState.putString("a", "a_value")
         outState.putString("b", "b_value")
 
-        outPersistentState.putString("aPersist", "aPersist_value")
-        outPersistentState.putString("bPersist", "bPersist_value")
-
-        super.onSaveInstanceState(outState, outPersistentState)
+       // outPersistentState.putString("aPersist", "aPersist_value")
+       // outPersistentState.putString("bPersist", "bPersist_value")
     }
 
 }
