@@ -41,9 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         vRecyclerView = findViewById<RecyclerView>(R.id.act1_recyclerView)
 
+        // createRequest("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Flenta.ru%2Frss")
         // Осуществление http запроса в сеть
         val o =
-            createRequest("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Flenta.ru%2Frss")
+            createRequest("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ftass.ru%2Fen%2Frss")
+
                 .map { Gson().fromJson(it, FeedAPI::class.java) }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()) // subscribeOn - поток, в котором будет выполнение, observeOn - поток, в который вернуть исполнение
